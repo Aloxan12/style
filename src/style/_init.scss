@@ -1,3 +1,5 @@
+@import "variables";
+
 *,
 *::before,
 *::after{
@@ -12,8 +14,8 @@ html, body{
 .container{
   margin: 0 auto;
   width: 1140px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: $grid-gap-side;
+  padding-left: $grid-gap-side;
 
   outline: solid 2px #ddd;
 }
@@ -21,17 +23,31 @@ html, body{
 .row{
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-  margin-bottom: 30px;
+  margin-right: -$grid-gap-side;
+  margin-left: -$grid-gap-side;
+  margin-bottom: $grid-gap;
+
+  > * {
+    margin-right: $grid-gap-side;
+    margin-left: $grid-gap-side;
+  }
 }
 
 .col{
   flex: 1 0 0%;
-  margin-right: 15px;
-  margin-left: 15px;
+
 }
 
+@mixin col($size){
+  flex: 0 0 auto;
+  width: calc(#{percentage($size / $grid-columns)} - #{$grid-gap});
+}
+
+@for $i from 1 through $grid-columns{
+  .col-#{$i}{
+    @include col($i);
+  }
+}
 
 .block{
   padding: 20px;
