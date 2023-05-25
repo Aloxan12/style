@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html, body{
+  margin: 0;
+  font-size: 22px;
+}
+
+.container{
+  margin: 0 auto;
+  width: 1140px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  outline: solid 2px #ddd;
+}
+
+.row{
+
+}
