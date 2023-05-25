@@ -19,5 +19,22 @@ html, body{
 }
 
 .row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 30px;
+}
 
+.col{
+  flex: 1 0 0%;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+
+.block{
+  padding: 20px;
+  height: 100%;
+  background-color: #ddd;
 }
