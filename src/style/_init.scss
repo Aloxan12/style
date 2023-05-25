@@ -6,9 +6,19 @@
   box-sizing: border-box;
 }
 
+@mixin media($width){
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
 html, body{
   margin: 0;
   font-size: 22px;
+
+  @include media(1000px){
+    background-color: rgba(25, 101, 174, 0.64);
+  }
 }
 
 .container{
@@ -35,7 +45,6 @@ html, body{
 
 .col{
   flex: 1 0 0%;
-
 }
 
 @mixin col($size){
@@ -46,6 +55,7 @@ html, body{
 @for $i from 1 through $grid-columns{
   .col-#{$i}{
     @include col($i);
+    background-color: #ddd;
   }
 }
 
