@@ -4,3 +4,13 @@ $grid-columns: 12;
 
 $grid-gap: 30px !default;
 $grid-gap-side: 15px;
+
+
+$grid-breakpoints:(
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+) !default;

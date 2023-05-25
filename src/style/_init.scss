@@ -12,12 +12,22 @@
   }
 }
 
+@mixin bp($name){
+  $width: map-get($grid-breakpoints, $name);
+  @include media($width){
+    @content;
+  }
+}
+
 html, body{
   margin: 0;
   font-size: 22px;
   background-color: rgb(239, 134, 134);
-  @include media(1000px){
-    background-color: rgb(177, 199, 220);
+  @include bp(md){
+    background-color: yellow;
+  }
+  @include bp(lg){
+    background-color: green;
   }
 }
 
