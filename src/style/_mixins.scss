@@ -34,6 +34,8 @@
       @media (min-width: $size) {
         width: map-get($container-max-width, $breakpoint);
       }
+    } @else {
+      width: 100%;
     }
   }
 }
