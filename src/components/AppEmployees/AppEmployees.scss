@@ -1,0 +1,14 @@
+@import "src/style/init";
+
+.employee{
+  @include row;
+
+  &__item{
+    @include col(12);
+    min-height: 100px;
+    background-color: #ddd;
+    @include bp(lg){
+      @include col(4);
+    }
+  }
+}
