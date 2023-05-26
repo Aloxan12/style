@@ -4,8 +4,8 @@ import './AppToggle.scss'
 export const AppToggle = () => {
     return (
         <div>
-            <input type="checkbox" id={'checker'}/>
-            <label htmlFor="checker" />
+            <input type="checkbox" id={'checker'} className='input-toggle'/>
+            <label htmlFor="checker" className='label-toggle' />
         </div>
     );
 }
