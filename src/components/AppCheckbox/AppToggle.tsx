@@ -1,7 +1,7 @@
 import React from 'react';
-import './AppCheckbox.scss'
+import './AppToggle.scss'
 
-export const AppCheckbox = () => {
+export const AppToggle = () => {
     return (
         <div>
             <input type="checkbox" id={'checker'}/>
