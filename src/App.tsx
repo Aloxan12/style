@@ -1,30 +1,13 @@
 import React from 'react';
 import './App.scss';
 import {Header} from "./components/AppHeader/Header";
+import {AppPreview} from "./components/AppPreview/AppPreview";
 
 function App() {
   return (
     <div className="container">
         <Header />
-        <div className="row">
-            <div className="col">
-                <div className="block">col</div>
-            </div>
-        </div>
-        <div className='row'>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-            <div className="col-1">col</div>
-        </div>
+        <AppPreview />
         <div className='row'>
             <div className="col-2">col</div>
             <div className="col-3">col</div>

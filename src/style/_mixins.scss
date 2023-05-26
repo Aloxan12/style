@@ -48,6 +48,7 @@
   margin-bottom: $grid-gap;
 
   > * {
+    margin-top: $grid-gap-side;
     margin-right: $grid-gap-side;
     margin-left: $grid-gap-side;
   }

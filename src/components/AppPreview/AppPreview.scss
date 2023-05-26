@@ -1,27 +1,26 @@
 @import "src/style/init";
 
-.header{
+.preview{
   @include row;
-  min-height: 90px;
   margin-bottom: 30px;
 
-  &__logo{
-    min-height: 50px;
+  &__text{
+    min-height: 150px;
     @include col(12);
     background-color: #dddddd;
   }
-  &__nav{
-    min-height: 50px;
+  &__photo{
+    min-height: 150px;
     @include col;
     background-color: #dddddd;
   }
 
   @include bp(md){
-    &__logo{
-      @include col(3);
+    &__text{
+      @include col(6);
     }
-    &__nav{
-      @include col(9);
+    &__photo{
+      @include col(6);
     }
   }
 }
