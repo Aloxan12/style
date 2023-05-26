@@ -4,11 +4,13 @@ import {Header} from "./components/AppHeader/Header";
 import {AppPreview} from "./components/AppPreview/AppPreview";
 import {AppList} from "./components/AppList/AppList";
 import {AppEmployees} from "./components/AppEmployees/AppEmployees";
+import {AppEffectsList} from "./components/AppEffectsList/AppEffectsList";
 
 function App() {
   return (
     <div className="container">
         <Header />
+        <AppEffectsList />
         <AppPreview />
         <AppList />
         <AppEmployees />

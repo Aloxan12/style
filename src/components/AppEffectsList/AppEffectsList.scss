@@ -1,6 +1,6 @@
 @import "src/style/init";
 
-.list{
+.effects-list{
   @include row;
 
   &__item{
@@ -8,13 +8,13 @@
     @include col(12);
     background-color: #dddddd;
     @include bp(lg){
-      @include col(2);
+      @include col(3);
+    }
+    @include bp(md){
+      @include col(3);
     }
     @include bp(md){
       @include col(4);
-    }
-    @include bp(sm){
-      @include col(6);
     }
   }
 }

@@ -7,6 +7,19 @@
     @include col(12);
     min-height: 100px;
     background-color: #ddd;
+
+    .employee-block{
+      @include row;
+      align-items: center;
+      &__item{
+        text-align: center;
+        @include col(6);
+        &:not(.name){
+          @include col(12);
+        }
+      }
+    }
+
     @include bp(lg){
       @include col(4);
     }
