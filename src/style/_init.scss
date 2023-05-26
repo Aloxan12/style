@@ -19,6 +19,14 @@ html, body{
   @include bp(lg){
     background-color: #67a467;
   }
+
+  @include bp(xl){
+    background-color: rgb(107, 119, 131);
+  }
+
+  @include bp(xxl){
+    background-color: rgb(91, 140, 140);
+  }
 }
 
 .container{
