@@ -1,0 +1,20 @@
+@import "src/style/init";
+
+.list{
+  @include row;
+
+  &__item{
+    min-height: 50px;
+    @include col(12);
+    background-color: #dddddd;
+    @include bp(lg){
+      @include col(2);
+    }
+    @include bp(md){
+      @include col(4);
+    }
+    @include bp(md){
+      @include col(6);
+    }
+  }
+}
