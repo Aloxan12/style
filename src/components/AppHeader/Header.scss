@@ -1,0 +1,25 @@
+@import "src/style/init";
+
+.header{
+  @include row;
+  min-height: 90px;
+  margin-bottom: 130px;
+
+  &__logo{
+    @include col;
+    background-color: #dddddd;
+  }
+  &__nav{
+    @include col;
+    background-color: #dddddd;
+  }
+
+  @include bp(md){
+    &__logo{
+      @include col(3);
+    }
+    &__nav{
+      @include col(9);
+    }
+  }
+}

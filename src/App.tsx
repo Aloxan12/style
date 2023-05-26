@@ -1,21 +1,11 @@
 import React from 'react';
 import './App.scss';
+import {Header} from "./components/AppHeader/Header";
 
 function App() {
   return (
     <div className="container">
-      <div className="row">
-        <div className="col">
-          <div className="block">col</div>
-        </div>
-        <div className="col">
-          <div className="block">col</div>
-        </div>
-        <div className="col">
-          <div className="block">col</div>
-        </div>
-      </div>
-
+        <Header />
         <div className="row">
             <div className="col">
                 <div className="block">col</div>

@@ -1,0 +1,52 @@
+@import "variables";
+
+@mixin col($size: 0) {
+  @if $size != 0 {
+    flex: 0 0 auto;
+    width: calc(#{percentage($size / $grid-columns)} - #{$grid-gap});
+  } @else {
+    flex: 1 0 0%;
+  }
+}
+
+@mixin media($width){
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin bp($name){
+  $width: map-get($grid-breakpoints, $name);
+  @include media($width){
+    @content;
+  }
+}
+
+@mixin container {
+  margin: 0 auto;
+  width: map-get($container-max-width, xxl);
+  padding-right: $grid-gap-side;
+  padding-left: $grid-gap-side;
+  outline: solid 2px #ddd;
+
+  @each $breakpoint, $size in $grid-breakpoints {
+    @if $size != 0 {
+      @media (min-width: $size) {
+        width: map-get($container-max-width, $breakpoint);
+      }
+    }
+  }
+}
+
+@mixin row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$grid-gap-side;
+  margin-left: -$grid-gap-side;
+  margin-bottom: $grid-gap;
+
+  > * {
+    margin-right: $grid-gap-side;
+    margin-left: $grid-gap-side;
+  }
+}
