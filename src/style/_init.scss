@@ -14,10 +14,10 @@ html, body{
   font-size: 22px;
   background-color: rgb(239, 134, 134);
   @include bp(md){
-    background-color: yellow;
+    background-color: #b0b083;
   }
   @include bp(lg){
-    background-color: green;
+    background-color: #67a467;
   }
 }
 
